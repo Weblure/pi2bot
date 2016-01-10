@@ -1,14 +1,17 @@
 # text.py - Part of pi2bot, by ngbeslhang
+# NOTE: Those with * are done.
 # TO-DO LIST:
 #   - Bot kill and start command for the bot and add a trigger function + boolean.
 #       - Which means a bot can be killed yet staying online so that owner can restart it.
-#       - Will also include totalkill command (closing the entire Python script and make bot offline)
+#       * Will also include totalkill command (closing the entire Python script and make bot offline)
 #   - Ownersnip system for certain commands w/ owner-checking function which returns boolean value. (Inspired by SexualRhinoceros' Musicbot)
 #       - Which also allow creation of whitelist command for certain commands.
 #           - ...which also leads to an idea of bot's permission system.
 #           - Command that toggles no permission message, disabled by default.
 #   - Timeout function which check which commands to time out with a list (be it array, external file etc.)
 #   - Bot language switcher.
+#   - Command that allow owner/whitelist to disable and enable other commands (not itself)
+#   - Command that allow owner to add a new command for simple purpose/code. (If possible)
 
 import discord
 import asyncio
@@ -34,9 +37,11 @@ def on_message(message):
         if message.content.startswith(bot.user.mention):
             cmd = message.content[len(bot.user.mention)+1:]
             
-            # Below are commands.
+            # Commands
+            # Display your Discord ID on console
             if cmd == 'myid':
                 print(message.author.id)
+            # kill - Kill the bot's Python script process
             if cmd == 'kill':
                 if check_ownership(message, cmd, True) == True:
                     yield from bot.send_message(message.channel, "Forcekilling the bot.")
