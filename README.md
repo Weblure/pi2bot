@@ -1,4 +1,7 @@
 # ngb's pi2bot
+
+***NOTE: PLEASE DO READ THE LICENSE FILE.***
+
 ### What is pi2bot?
 pi2bot is a Discord Bot written in discord.py and aims to be both easily customizable, extensible by code and be rewritten in multiple programming languages (for my own self-learning purpose).
 
