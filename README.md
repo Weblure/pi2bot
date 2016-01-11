@@ -3,7 +3,7 @@
 ***NOTE: PLEASE DO READ THE LICENSE FILE.***
 
 ### What is pi2bot?
-pi2bot is a Discord Bot written in discord.py and aims to be both easily customizable, extensible by code and be rewritten in multiple programming languages (for my own self-learning purpose).
+pi2bot is a Discord Bot written in discord.py and aims to be both easily customizable, extensible by code and be rewritten in multiple programming languages (for my own self-learning and practice purpose).
 
 ### Why pi2bot instead of <insert-name>?
 ***NOTE: Unrelated to Discord or the bot itself***
