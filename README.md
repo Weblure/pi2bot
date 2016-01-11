@@ -7,6 +7,7 @@ pi2bot is a Discord Bot written in discord.py and aims to be both easily customi
 
 ### Why pi2bot instead of (insert name)?
 ***NOTE: Unrelated to Discord or the bot itself***
+
 pi2 is the team name of my Pokemon Mystery Dungeon series' (EoS and SMD so far), which consist of **Pi**kachu and **Pi**plup as main characters. 
 
 The main reason I chose this name is due to it first coming out of my mind after I deem "ngbbot" too lame.
