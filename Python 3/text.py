@@ -3,7 +3,7 @@
 # TO-DO LIST:
 #   * Global bot disabling and enabling command. (Kudos to Hornwitser)
 #       - Able to allow owner to disable individual commands
-#       - Which means a bot can be killed yet staying online so that owner can restart it.
+#       * Which means a bot can be killed yet staying online so that owner can restart it.
 #       * Kill command (closing the entire Python script and make bot offline)
 #   * Ownership system for certain commands. (Inspired by SexualRhinoceros' Musicbot)
 #       - Which also allow creation of whitelist command for certain commands.
@@ -16,6 +16,7 @@
 #   - PM-based invitation accept system which the owner can choose to accept or not.
 #   - Help command which also list help for individial command if inserted as second parameter.
 #       - Inspired by Red_M testing his bot, Frog's ,help command
+#   - Currency-to-currency converter (Inspired by Barbara Pun-kelman using bot Frog ,zetacoin)
 #
 # Kudos to Hornwitser, Nerketur and others at unofficial Discord API server's #python_discord-py for helping me teaching me more about Python!
 
@@ -69,10 +70,15 @@ def on_message(message):
                 return
             
             # This part is for owner-only commands.
-            if is_owner == True and cmd in ('kill', 'enable', 'disable') or cmd[:5] in ('check'):
+            if is_owner == True and cmd in ('kill', 'enable', 'disable', 'restart') or cmd[:5] in ('check'):
                 if cmd == 'kill':
                     yield from bot.send_message(message.channel, 'Killing...')
                     cmd_kill()
+                # restart command section will be commented, please uncomment them yourself in order to use it.
+                #if cmd == 'restart':
+                #    yield from bot.send_message(message.channel, 'Restarting, please wait for a few seconds...')
+                #    os.system("python text.py")
+                #    cmd_kill()
                 if cmd == 'enable' or 'disable':
                     if cmd == 'disable':
                         yield from bot.send_message(message.channel, 'Disabling...')
@@ -84,10 +90,10 @@ def on_message(message):
                 if cmd[:5] == 'check':
                     if cmd[6:] == 'status':
                         if is_disabled == True:
-                            status = 'Disabled'
+                            status = 'disabled'
                             disabled_msg_count = disabled_msg_count + 1
                         else:
-                            status = 'Enabled'
+                            status = 'working'
                         yield from bot.send_message(message.channel, 'Bot status: ' + status)
                         
             elif is_owner == False and cmd in ('kill', 'enable', 'disable') or cmd[:5] in ('check'):
