@@ -11,7 +11,7 @@
     * ~~Owner system~~
     * Whitelist system
 * Command which toggles whenether the "no permission" message shows or not.
-* Timeout
+* Timeout command (Thanks to @technophoenix over r/Pokemon Discord server for inspiration with the format timeout(time))
 * Chinese language
 * Command which allow people with permission (owner only by default)
 * PM-based invitation accept system which the owner can choose to accept or not.
