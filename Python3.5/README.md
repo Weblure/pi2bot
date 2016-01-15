@@ -3,6 +3,12 @@
 
 **pi2text.py** - The main part.
 
+Using the bot is as easy as:
+```
+import pi2text
+
+pi2text.init(email, name, owner_id)```
+
 ### TODO LIST (Those being striked are already done)
 * ~~Disable/enable command to disable/enable the bot.~~
     * Able to disable individual commands/commands group via "disable/enable <cmd/cmd group name>".
